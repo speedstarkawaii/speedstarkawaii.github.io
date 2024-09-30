@@ -95,6 +95,7 @@
             background-color: white;
             border-radius: 50%;
             animation: fall 5s linear infinite;
+            pointer-events: none; /* Prevent sparkles from interacting with buttons */
         }
 
         @keyframes fall {
@@ -126,6 +127,7 @@
             sparkle.classList.add('sparkle');
             sparkle.style.left = Math.random() * 100 + 'vw';
             sparkle.style.animationDuration = Math.random() * 2 + 3 + 's';
+            sparkle.style.opacity = Math.random();
             document.body.appendChild(sparkle);
 
             // Remove the sparkle after it falls down
