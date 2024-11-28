@@ -3,141 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYX</title>
+    <title>Simple Black Background</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
+        body {
             background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            position: relative;
-            height: 100%;
-            width: 100%;
-        }
-
-        .background-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://cdn.discordapp.com/attachments/1277096331621699647/1290367533232164995/syes.png?ex=66fc33e9&is=66fae269&hm=4da11feb609bc48c21319604c9b5fdf348713bdbb9474d13460c0187a5debc1f');
-            background-size: cover;
-            background-position: center;
-            filter: blur(15px);
-        }
-
-        .center-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
             color: white;
-        }
-
-        .center-text h1 {
-            font-size: 8vw;
+            font-family: Arial, sans-serif;
             margin: 0;
-            font-weight: bold;
+            padding: 20px;
+            text-align: center;
         }
-
-        .center-text p {
-            font-size: 1.5vw;
-            margin: 5px 0 20px;
-        }
-
-        .button {
-            padding: 10px 30px;
-            font-size: 1.2vw;
-            color: black;
-            background-color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .button:hover {
-            background-color: lightgray;
-        }
-
-        .tos-button {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 5px 20px;
-            font-size: 1vw;
-            background-color: white;
-            color: black;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .tos-button:hover {
-            background-color: lightgray;
-        }
-
-        .sparkle {
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            background-color: white;
-            border-radius: 50%;
-            animation: fall 5s linear infinite;
-            pointer-events: none; /* Prevent sparkles from interacting with buttons */
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-10px) scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh) scale(0.5);
-                opacity: 0;
-            }
+        p {
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="background-image"></div>
-        <div class="center-text">
-            <h1>NYX</h1>
-            <p>A luxury roblox script executor</p>
-            <button class="button">DOWNLOAD</button>
-        </div>
-        <button class="tos-button">TOS</button>
-    </div>
-
-    <script>
-        function createSparkle() {
-            const sparkle = document.createElement('div');
-            sparkle.classList.add('sparkle');
-            sparkle.style.left = Math.random() * 100 + 'vw';
-            sparkle.style.animationDuration = Math.random() * 2 + 3 + 's';
-            sparkle.style.opacity = Math.random();
-            document.body.appendChild(sparkle);
-
-            // Remove the sparkle after it falls down
-            setTimeout(() => {
-                sparkle.remove();
-            }, 5000);
-        }
-
-        // Create sparkles at random intervals
-        setInterval(createSparkle, 200);
-    </script>
+    <p>This is a simple website with a black background and white text. You can modify this paragraph to say anything you like!</p>
 </body>
 </html>
